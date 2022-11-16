@@ -10,3 +10,4 @@ name|version
 [jquery-zoom](https://www.npmjs.com/package/jquery-zoom)|1.7.20
 [nouislider](https://www.npmjs.com/package/nouislider)|10.0.0
 [slick-carousel](https://kenwheeler.github.io/slick/)|unknown(latest: 1.8.0)
+[Google fonts](https://fonts.google.com/about)|
