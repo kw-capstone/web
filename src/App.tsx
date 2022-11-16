@@ -1,26 +1,13 @@
 import { useState } from "react";
-import {
-  AppFooter,
-  AppHeader,
-  AppNav,
-  HotDeal,
-  NewProducts,
-  NewsLetter,
-  ShopCollections,
-  TopSelling,
-  TopSellingSmall,
-} from "./components";
+import { AppFooter, AppHeader, AppNav, NewsLetter } from "./components";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <AppHeader />
       <AppNav />
-      <ShopCollections />
-      <NewProducts />
-      <HotDeal />
-      <TopSelling />
-      <TopSellingSmall />
+      <Outlet />
       <NewsLetter />
       <AppFooter />
     </div>
