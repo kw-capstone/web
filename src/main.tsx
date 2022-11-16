@@ -8,7 +8,7 @@ import "nouislider/distribute/nouislider.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "./style.css";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import { CheckOut, Home } from "./views";
+import { CheckOut, Home, Product } from "./views";
 
 const router = createBrowserRouter(
   [
@@ -23,6 +23,10 @@ const router = createBrowserRouter(
         {
           path: "checkout",
           element: <CheckOut />,
+        },
+        {
+          path: "product",
+          element: <Product />,
         },
       ],
     },
