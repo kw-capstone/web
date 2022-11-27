@@ -1,7 +1,7 @@
 # TODO
 
 1. [ ] apply lazy loading
-2. [ ] refactor duplicated code
+2. [x] refactor duplicated code
    1. [x] product
       1. [x] product detal
       2. [x] related product
@@ -25,3 +25,4 @@
 6. [ ] migrate process
    1. [ ] product: apply slick
    2. [ ] product: apply tab
+3. [ ] feat: update main view slick css
