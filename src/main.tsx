@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "nouislider/distribute/nouislider.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "./style.css";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { CheckOut, Home, Product, Store } from "./views";
 
 const router = createBrowserRouter(
