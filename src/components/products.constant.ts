@@ -32,6 +32,7 @@ export const products: IProduct[] = [
     oldPrice: "$990.00",
     isTopSelling: true,
     isSale: true,
+    isNew: true,
     rating: 0,
   },
   {
