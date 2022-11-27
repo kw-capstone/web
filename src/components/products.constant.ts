@@ -5,6 +5,10 @@ export interface IProduct {
   name: string;
   price: string;
   oldPrice: string;
+  isSale?: boolean;
+  isNew?: boolean;
+  rating: number;
+  isTopSelling?: boolean;
 }
 
 export const products: IProduct[] = [
@@ -15,6 +19,9 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    isTopSelling: true,
+    isNew: true,
+    rating: 4,
   },
   {
     id: 1,
@@ -23,6 +30,9 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    isTopSelling: true,
+    isSale: true,
+    rating: 0,
   },
   {
     id: 2,
@@ -31,6 +41,8 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    isTopSelling: true,
+    rating: 5,
   },
   {
     id: 3,
@@ -39,6 +51,8 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    isTopSelling: true,
+    rating: 5,
   },
   {
     id: 4,
@@ -47,6 +61,7 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    rating: 0,
   },
   {
     id: 5,
@@ -55,6 +70,7 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    rating: 0,
   },
   {
     id: 6,
@@ -63,6 +79,7 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    rating: 0,
   },
   {
     id: 7,
@@ -71,6 +88,7 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    rating: 0,
   },
   {
     id: 8,
@@ -79,5 +97,9 @@ export const products: IProduct[] = [
     name: "product name goes here",
     price: "$980.00",
     oldPrice: "$990.00",
+    isSale: true,
+    isNew: true,
+    rating: 5,
+    isTopSelling: true,
   },
 ];
