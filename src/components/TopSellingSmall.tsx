@@ -1,12 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import $ from "jquery";
 import "slick-carousel";
-import { IProduct, products } from "./products.constant";
-
-const newArr: IProduct[][] = [];
-while (products.length) newArr.push(products.splice(0, 3));
+import { chunkArr, products } from "./products.constant";
 
 export const TopSellingSmall = () => {
+  const [topProducts, setTopProducts] = useState(() => chunkArr(products, 3));
+
   useEffect(() => {
     $(".products-widget-slick").each(function () {
       var $this = $(this),
@@ -45,32 +44,29 @@ export const TopSellingSmall = () => {
                 className="products-widget-slick"
                 data-nav={`#slick-nav-${num}`}
               >
-                {newArr.length &&
-                  newArr.map((arr, id) => (
-                    <div key={id}>
-                      {arr.map((product) => (
-                        <div key={product.id} className="product-widget">
-                          <div className="product-img">
-                            <img src={`./img/${product.img}`} alt="" />
-                          </div>
-                          <div className="product-body">
-                            <p className="product-category">
-                              {product.category}
-                            </p>
-                            <h3 className="product-name">
-                              <a href="#">{product.name}</a>
-                            </h3>
-                            <h4 className="product-price">
-                              {product.price}{" "}
-                              <del className="product-old-price">
-                                {product.oldPrice}
-                              </del>
-                            </h4>
-                          </div>
+                {topProducts.map((arr, id) => (
+                  <div key={id}>
+                    {arr.map((product) => (
+                      <div key={product.id} className="product-widget">
+                        <div className="product-img">
+                          <img src={`./img/${product.img}`} alt="" />
                         </div>
-                      ))}
-                    </div>
-                  ))}
+                        <div className="product-body">
+                          <p className="product-category">{product.category}</p>
+                          <h3 className="product-name">
+                            <a href="#">{product.name}</a>
+                          </h3>
+                          <h4 className="product-price">
+                            {product.price}{" "}
+                            <del className="product-old-price">
+                              {product.oldPrice}
+                            </del>
+                          </h4>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           ))}
