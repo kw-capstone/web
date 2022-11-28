@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import $ from "jquery";
+import "slick-carousel";
+
 const ProductDetail = () => {
   const product = {
     image: ["product01.png", "product03.png", "product06.png", "product08.png"],
@@ -52,6 +56,40 @@ incididunt ut labore et dolore magna aliqua`,
       },
     ],
   };
+
+  useEffect(() => {
+    $("#product-main-img").not(".slick-initialized").slick({
+      infinite: true,
+      speed: 300,
+      dots: false,
+      arrows: true,
+      fade: true,
+      asNavFor: "#product-imgs",
+    });
+
+    $("#product-imgs")
+      .not(".slick-initialized")
+      .slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: true,
+        focusOnSelect: true,
+        centerPadding: "0px",
+        vertical: true,
+        asNavFor: "#product-main-img",
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              vertical: false,
+              arrows: false,
+              dots: true,
+            },
+          },
+        ],
+      });
+  });
 
   const ratingAvg =
     product.ratings.reduce((a, b) => a + b) / product.ratings.length;
