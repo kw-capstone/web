@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import $ from "jquery";
 import "slick-carousel";
 import { products } from "./products.constant";
+import { Link } from "react-router-dom";
 
 export const TopSelling = () => {
   const [topSellingProducts, setTopSellingProducts] = useState(() => {
@@ -101,7 +102,7 @@ export const TopSelling = () => {
                         <div className="product-body">
                           <p className="product-category">{product.category}</p>
                           <h3 className="product-name">
-                            <a href="#">{product.name}</a>
+                            <Link to={"/product"}>{product.name}</Link>
                           </h3>
                           <h4 className="product-price">
                             {product.price}{" "}

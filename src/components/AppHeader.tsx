@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const TopHeader = () => {
   return (
     <div id="top-header">
@@ -46,9 +48,9 @@ const MainHeader = () => {
           {/* <!-- LOGO --> */}
           <div className="col-md-3">
             <div className="header-logo">
-              <a href="#" className="logo">
+              <Link to={"/"} className="logo">
                 <img src="./img/logo.png" alt="" />
-              </a>
+              </Link>
             </div>
           </div>
           {/* <!-- /LOGO --> */}
@@ -135,9 +137,9 @@ const MainHeader = () => {
                   </div>
                   <div className="cart-btns">
                     <a href="#">View Cart</a>
-                    <a href="#">
+                    <Link to={"/checkout"}>
                       Checkout <i className="fa fa-arrow-circle-right"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

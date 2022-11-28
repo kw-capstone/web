@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import $ from "jquery";
 import "slick-carousel";
 import { IProduct, products } from "./products.constant";
+import { Link } from "react-router-dom";
 
 interface ProductsProps {
   products: IProduct[];
@@ -23,7 +24,7 @@ const Products = (props: ProductsProps) => {
           <div className="product-body">
             <p className="product-category">{product.category}</p>
             <h3 className="product-name">
-              <a href="#">{product.name}</a>
+              <Link to={"/product"}>{product.name}</Link>
             </h3>
             <h4 className="product-price">
               {product.price}{" "}

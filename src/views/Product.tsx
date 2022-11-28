@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import $ from "jquery";
 import "slick-carousel";
+import { Link } from "react-router-dom";
 
 const ProductDetail = () => {
   const product = {
@@ -547,7 +548,7 @@ const RelatedProduct = () => {
                       {product.productCatecory}
                     </p>
                     <h3 className="product-name">
-                      <a href="#">{product.productName}</a>
+                      <Link to={"/"}>{product.productName}</Link>
                     </h3>
                     <h4 className="product-price">
                       {product.productPrice}{" "}

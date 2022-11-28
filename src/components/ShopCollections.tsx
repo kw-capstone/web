@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const ShopCollections = () => {
   return (
     <div className="section">
@@ -17,9 +19,9 @@ export const ShopCollections = () => {
                   <br />
                   Collection
                 </h3>
-                <a href="#" className="cta-btn">
+                <Link className="cta-btn" to={"/store"}>
                   Shop now <i className="fa fa-arrow-circle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -37,9 +39,9 @@ export const ShopCollections = () => {
                   <br />
                   Collection
                 </h3>
-                <a href="#" className="cta-btn">
+                <Link className="cta-btn" to={"/store"}>
                   Shop now <i className="fa fa-arrow-circle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -57,9 +59,9 @@ export const ShopCollections = () => {
                   <br />
                   Collection
                 </h3>
-                <a href="#" className="cta-btn">
+                <Link className="cta-btn" to={"/store"}>
                   Shop now <i className="fa fa-arrow-circle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
