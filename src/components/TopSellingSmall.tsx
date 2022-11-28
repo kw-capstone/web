@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import $ from "jquery";
 import "slick-carousel";
 import { chunkArr, products } from "./products.constant";
+import { Link } from "react-router-dom";
 
 export const TopSellingSmall = () => {
   const [topProducts, setTopProducts] = useState(() => chunkArr(products, 3));
@@ -54,7 +55,7 @@ export const TopSellingSmall = () => {
                         <div className="product-body">
                           <p className="product-category">{product.category}</p>
                           <h3 className="product-name">
-                            <a href="#">{product.name}</a>
+                            <Link to={"/product"}>{product.name}</Link>
                           </h3>
                           <h4 className="product-price">
                             {product.price}{" "}
