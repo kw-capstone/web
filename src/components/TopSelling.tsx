@@ -3,6 +3,7 @@ import $ from "jquery";
 import "slick-carousel";
 import { products } from "./products.constant";
 import { Link } from "react-router-dom";
+import { Nav, NavItem } from "react-bootstrap";
 
 export const TopSelling = () => {
   const [topSellingProducts, setTopSellingProducts] = useState(() => {
@@ -54,28 +55,16 @@ export const TopSelling = () => {
             <div className="section-title">
               <h3 className="title">Top selling</h3>
               <div className="section-nav">
-                <ul className="section-tab-nav tab-nav">
-                  <li className="active">
-                    <a data-toggle="tab" href="#tab2">
-                      Laptops
-                    </a>
-                  </li>
-                  <li>
-                    <a data-toggle="tab" href="#tab2">
-                      Smartphones
-                    </a>
-                  </li>
-                  <li>
-                    <a data-toggle="tab" href="#tab2">
-                      Cameras
-                    </a>
-                  </li>
-                  <li>
-                    <a data-toggle="tab" href="#tab2">
-                      Accessories
-                    </a>
-                  </li>
-                </ul>
+                <Nav
+                  className="section-tab-nav tab-nav"
+                  bsClass="ul"
+                  activeKey={1}
+                >
+                  <NavItem eventKey={1}>Laptops</NavItem>
+                  <NavItem eventKey={2}>Smartphones</NavItem>
+                  <NavItem eventKey={3}>Cameras</NavItem>
+                  <NavItem eventKey={4}>Accessories</NavItem>
+                </Nav>
               </div>
             </div>
           </div>
