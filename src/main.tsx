@@ -36,7 +36,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: "/web" }
+  { basename: "/web/" }
 );
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
