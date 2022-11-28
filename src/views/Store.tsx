@@ -202,7 +202,7 @@ export const Store = () => {
             <div className="store-filter clearfix">
               <div className="store-sort">
                 <label>
-                  Sort By:
+                  Sort By:{" "}
                   <select className="input-select">
                     <option value="0">Popular</option>
                     <option value="1">Position</option>
@@ -210,7 +210,7 @@ export const Store = () => {
                 </label>
 
                 <label>
-                  Show:
+                  Show:{" "}
                   <select className="input-select">
                     <option value="0">20</option>
                     <option value="1">50</option>
@@ -238,7 +238,7 @@ export const Store = () => {
                   <div className="product-img">
                     <img src="./img/product01.png" alt="" />
                     <div className="product-label">
-                      <span className="sale">-30%</span>
+                      <span className="sale">-30%</span>{" "}
                       <span className="new">NEW</span>
                     </div>
                   </div>
