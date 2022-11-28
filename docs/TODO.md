@@ -18,4 +18,4 @@
 | fix      | product-slick     | remove image overlap (#9)          | :heavy_check_mark: |
 | fix      | header            | apply cart dropdown js (#7)        | :heavy_check_mark: |
 | fix      | store             | aside price js not work            | :x:                |
-| fix      | router            | router basename (#11)              | :x:                |
+| fix      | router            | router basename (#11)              | :heavy_check_mark: |
